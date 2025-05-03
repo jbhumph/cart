@@ -12,7 +12,7 @@ function Header() {
             <a href="/products">Products</a>
         </div>
         <div className="cartIcon">
-            <ShoppingCart size={24} color="white" />
+            <ShoppingCart size={24} color="var(--Color-C)" />
         </div>
     </div>
   );

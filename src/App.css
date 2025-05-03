@@ -2,7 +2,7 @@
   min-width: 100vw;
   min-height: 100vh;
   margin: 0;
-  padding: 0 1.5em;
+  padding: 0 0;
   text-align: center;
 }
 
@@ -40,4 +40,42 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+  background-color: var(--Color-D);
+  padding: 0em;
+  color: var(--Color-A);
+}
+
+.page h1 {
+  padding: 0.5em;
+}
+
+.homeText {
+  padding: 1.5em;
+}
+
+.homeBanner {
+  display: flex;
+  background-color: var(--Color-B);
+  color: var(--Color-C);
+  box-shadow: 10px 10px 8px #888888;
+  margin: 2em;
+  margin-top: 5em;
+  border-radius: 1em;
+}
+
+.homeBannerText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em;
+  
 }
