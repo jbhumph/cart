@@ -5,7 +5,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Home from './pages/Home.jsx'
 import Products from './pages/Products.jsx';
-import Header from './components/Header.jsx';
+import Header from './components/header/Header.jsx';
 
 
 const router = createBrowserRouter([
