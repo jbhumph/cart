@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Card from '../components/card/Card.jsx';
 
-function Products() {
+function Products({ addToCart }) {
   const [products, setProducts] = useState([
     { id: 1, name: 'Laptop', price: 999.99, image: '/api/placeholder/200/150' },
     { id: 2, name: 'Smartphone', price: 699.99, image: '/api/placeholder/200/150' },
@@ -15,7 +15,7 @@ function Products() {
       <p>Here are some of our products.</p>
       <div className="product-grid">
         {products.map(product => (
-          <Card key={product.id} product={product} />
+          <Card key={product.id} product={product} addToCart={addToCart} />
         ))}
       </div>
     </div>

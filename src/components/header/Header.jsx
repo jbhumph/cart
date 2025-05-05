@@ -1,7 +1,7 @@
 import "./header.css";
 import { ShoppingCart} from 'lucide-react';
 
-function Header() {
+function Header({ count }) {
   return (
     <div className="header">
         <div className="logo">
@@ -13,6 +13,7 @@ function Header() {
         </div>
         <div className="cartIcon">
             <ShoppingCart size={24} color="var(--Color-C)" />
+            <span className="cartCount">{count}</span>
         </div>
     </div>
   );
