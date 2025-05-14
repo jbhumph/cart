@@ -7,10 +7,7 @@ import Cart from './pages/Cart.jsx';
 import Header from './components/header/Header.jsx';
 
 function App() {
-  const [cart, setCart] = useState(() => {
-    const savedCart = localStorage.getItem('cart')
-    return savedCart ? JSON.parse(savedCart) : []
-  });
+  const [cart, setCart] = useState([]);
 
   const cartCount = cart.reduce((acc, item) => acc + item.quantity, 0)
 
@@ -30,10 +27,6 @@ function App() {
     })
   }
 
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart))
-  }, [cart]);
-
   return (
     <Router>
       <div className="App">
@@ -41,7 +34,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products addToCart={addToCart}/>} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<Cart cart={cart}/>} />
         </Routes>
       </div>
     </Router>

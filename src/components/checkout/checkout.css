@@ -1,0 +1,31 @@
+.checkout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--Color-B);
+  color: var(--Color-C);
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 10px 10px 8px #888888;
+}
+
+.checkout h2 {
+    color: var(--Color-E);
+}
+
+thead {
+  color: white;
+}
+
+.checkout-items,
+.final-items {
+  width: 80%; /* Ensure both tables have the same width */
+  margin: 0 auto; /* Center the tables horizontally */
+  padding: 30px;
+}
+
+.checkout-items tbody td:last-child,
+.final-items tbody td:last-child {
+  text-align: right; /* Align text in the final row to the right */
+}
