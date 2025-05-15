@@ -27,6 +27,25 @@ function App() {
     })
   }
 
+  const removeFromCart = (product) => {
+    setCart(prevCart => {
+      const itemIndex = prevCart.findIndex(item => item.id === product.id)
+      if (itemIndex !== -1) {
+        const updatedCart = [...prevCart]
+        if (updatedCart[itemIndex].quantity > 1) {
+          updatedCart[itemIndex] = {
+            ...updatedCart[itemIndex],
+            quantity: updatedCart[itemIndex].quantity - 1
+          }
+          return updatedCart
+        } else {
+          return prevCart.filter(item => item.id !== product.id)
+        }
+      }
+      return prevCart
+    })
+  }
+
   return (
     <Router>
       <div className="App">
@@ -34,7 +53,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products addToCart={addToCart}/>} />
-          <Route path="/cart" element={<Cart cart={cart}/>} />
+          <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart}/>} />
         </Routes>
       </div>
     </Router>

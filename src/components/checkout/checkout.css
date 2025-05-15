@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  margin-top: 20px;
   background-color: var(--Color-B);
   color: var(--Color-C);
   width: 100%;
@@ -25,7 +26,10 @@ thead {
   padding: 30px;
 }
 
-.checkout-items tbody td:last-child,
-.final-items tbody td:last-child {
+.checkout-items tbody td:last-child{
   text-align: right; /* Align text in the final row to the right */
+}
+
+.checkout-button {
+  background-color: var(--Color-C);
 }

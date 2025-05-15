@@ -33,17 +33,16 @@ function Checkout({ cart }) {
             <table className="final-items">
                 <thead>
                     <tr>
-                        <th>Total Items</th>
                         <th>Total Price</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{total}</td>
                         <td>{price}</td>
                     </tr>
                 </tbody>
             </table>
+            <button className="checkout-button">Checkout</button>
         </div>
     )
 }

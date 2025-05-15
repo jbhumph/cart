@@ -1,18 +1,16 @@
-import React from 'react';
 import Checkout from '../components/checkout/Checkout.jsx';
 import Items from '../components/items/Items.jsx';
 
 
-function Cart({ cart }) {
+function Cart({ cart, removeFromCart }) {
   return (
     <div className="page">
         <h1>Cart</h1>
         <div className="split">
             <div className="left">
-                <h2>Items in Cart</h2>
                 <div className="items">{cart.map((item) => (
                     <div key={item.id} className="item">
-                        <Items product={item} quantity={item.quantity} />
+                        <Items product={item} removeFromCart={removeFromCart} />
                     </div>
                 ))}</div>
             </div>

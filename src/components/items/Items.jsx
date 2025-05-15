@@ -1,8 +1,8 @@
-function Items({ product, quantity }) {
+function Items({ product, removeFromCart }) {
     return (
         <>
             <div className="item-image">
-                <img src={product.image} alt={product.name} />
+                <img src={product.image} alt={product.name} width='30px'/>
             </div>
             <div className="item-details">
                 <h2>{product.name}</h2>
@@ -10,7 +10,7 @@ function Items({ product, quantity }) {
                 <p>Quantity: {product.quantity}</p>
             </div>
             <div className="item-actions">
-                <button className="add-to-cart">Add to Cart</button>
+                <button onClick={() => removeFromCart(product)} className="remove-from-cart">Remove</button>
             </div>
         </>
     );
