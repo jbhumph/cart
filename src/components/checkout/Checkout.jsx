@@ -38,7 +38,7 @@ function Checkout({ cart }) {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{price}</td>
+                        <td>${price.toFixed(2)}</td>
                     </tr>
                 </tbody>
             </table>

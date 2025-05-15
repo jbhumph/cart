@@ -1,10 +1,14 @@
 :root {
   /* Color palette */
-  --Color-A: #242424;
-  --Color-B: #14213D;  
-  --Color-C: #FCA311;
-  --Color-D: #E5E5E5;
-  --Color-E: #F9F9F9;
+  --Color-A: #03045e;
+
+  --Color-B: #0077b6;
+
+  --Color-C: #00b4d8;
+
+  --Color-D: #90e0ef;
+
+  --Color-E: #caf0f8;
 
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
