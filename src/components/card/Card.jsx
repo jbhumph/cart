@@ -1,5 +1,5 @@
 import picture from '../../assets/react.svg';
-import './Card.css';
+import './card.css';
 
 function Card({ product, addToCart }) {
     return (
