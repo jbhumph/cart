@@ -3,11 +3,6 @@ import './checkout.css';
 function Checkout({ cart }) {
     const total = cart.reduce((sum, item) => sum + item.quantity, 0);
     const price = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-
-    cart.map((item) => {
-        total += item.quantity
-        price += (item.price * item.quantity)
-    })
     
     return (
         <div className="checkout">
